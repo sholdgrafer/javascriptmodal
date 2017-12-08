@@ -1,0 +1,405 @@
+@charset "utf-8";
+/*
+Template Name: Jeren
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Framework CSS
+*/
+@font-face{ 
+	font-family: 'KELMSCOT';
+	src: url('fonts/KELMSCOT-webfont.eot');
+	src: url('fonts/KELMSCOT-webfont.eot?iefix') format('eot'),
+	     url('fonts/KELMSCOT-webfont.woff') format('woff'),
+	     url('fonts/KELMSCOT-webfont.ttf') format('truetype'),
+	     url('KELMSCOT-webfont.svg') format('svg');
+}
+
+html{overflow-y:scroll; overflow-x:hidden;}
+html, body{margin:0; padding:0; font-size:16px; line-height:1.6em;}
+
+*, *::before, *::after{box-sizing:border-box;}
+
+.bold{font-weight:bold;}
+.center{text-align:center;}
+.right{text-align:right;}
+.uppercase{text-transform:uppercase;}
+.capitalise{text-transform:capitalize;}
+.hidden{display:none;}
+.nospace{margin:0; padding:0; list-style:none;}
+.block{display:block;}
+.justified{text-align:justify;}
+.inline *{display:inline-block;}
+.inline *:last-child{margin-right:0;}
+.pushright li{margin-right:20px;}
+.pushright li:last-child{margin-right:0;}
+.borderedbox{border:1px solid;}
+/* testing a hover pseudo selector */
+.borderedbox:hover {border: 4px solid black}
+/* testing a hover pseudo selector */
+.overlay{position:relative; z-index:1;}
+.overlay::after{display:block; position:absolute; top:0; left:0; width:100%; height:100%; content:""; z-index:-1;}
+.bgded{background-position:top center; background-repeat:no-repeat; background-size:cover;}
+.circle, .icon{border-radius:50%; background-clip:padding-box;}
+
+.btn{display:inline-block; 
+     padding:8px 18px 10px; 
+     text-transform:uppercase; 
+     border:1px solid;
+     font-size: 14px;
+}
+
+blockquote{display:block; position:relative; width:100%; margin:0; padding:20px 0 0 20px; line-height:1.4; z-index:1;}
+blockquote::before{display:block; position:absolute; top:0; left:0; font-family:"FontAwesome"; font-size:60px; line-height:60px; content:"\f10d"; z-index:-1;}
+
+.icon{display:inline-block; width:80px; height:80px; line-height:78px; border:1px solid; text-align:center; font-size:32px;}
+
+.clear, .group{display:block;}
+.clear::before, .clear::after, .group::before, .group::after{display:table; content:"";}
+.clear, .clear::after, .group, .group::after{clear:both;}
+
+a{outline:none; text-decoration:none;}
+
+.fl_left, .imgl{float:left;}
+.fl_right, .imgr{float:right;}
+
+img {width:auto; 
+    max-width:100%; 
+    height:auto; 
+    margin:0; 
+    padding:0; 
+    border:none; 
+    line-height:normal; 
+    vertical-align:middle;}
+.imgl{margin:0 15px 10px 0; clear:left;}
+.imgr{margin:0 0 10px 15px; clear:right;}
+
+
+/* Fonts
+--------------------------------------------------------------------------------------------------------------- */
+body, input, textarea, select{font-family:Courier, Verdana, Geneva, sans-serif;}
+h1, h2, h3, h4, h5, h6, .heading{font-family:"KELMSCOT", Georgia, "Times New Roman", Times, serif;}
+p, .gallerytext, figcaption {font-family:Georgia, "Times New Roman", Times, serif;}
+
+
+/* Forms
+--------------------------------------------------------------------------------------------------------------- */
+form, fieldset, legend{margin:0; padding:0; border:none;}
+legend{display:none;}
+label, input, textarea, select, button{display:block; resize:none; outline:none; color:inherit; font-size:inherit; font-family:inherit; vertical-align:middle;}
+label{margin-bottom:5px;}
+:required, :invalid{outline:none; box-shadow:none;}
+
+
+/* Generalise
+--------------------------------------------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6, .heading{margin:0 0 15px 0; font-size:22px; line-height:normal; font-weight:normal; text-transform:capitalize;}
+
+address{font-style:normal; font-weight:normal;}
+hr{display:block; width:100%; height:1px; border:solid; border-width:1px 0 0 0;}
+
+.font-xs{font-size:.8rem;}
+.font-x1{font-size:1.1rem;}
+.font-x2{font-size:1.8rem;}
+.font-x3{font-size:2.8rem;}
+
+.wrapper{display:block; position:relative; width:100%; margin:0; padding:0; text-align:left; word-wrap:break-word;}
+/*
+The "hoc" class is a generic class used to centre a containing element horizontally
+It should be used in conjunction with a second class or ID
+*/
+.hoc{display:block; margin:0 auto;}
+
+
+/* HTML 5 Overrides
+--------------------------------------------------------------------------------------------------------------- */
+address, article, aside, figcaption, figure, footer, header, main, nav, section{display:block; margin:0; padding:0;}
+
+
+/* Grid
+--------------------------------------------------------------------------------------------------------------- */
+.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:inline-block; float:left; margin:0 0 0 3.06748466257669%; list-style:none;}
+
+.first{margin-left:0; clear:left;}
+
+.one_quarter{width:22.69938650306748%;}
+.one_third{width:31.28834355828221%;}
+.one_half, .two_quarter{width:48.46625766871166%;}
+.two_third{width:65.6441717791411%;}
+.three_quarter{width:72.23312883435584%; margin-right: 10px;}
+
+
+/* Spacing
+--------------------------------------------------------------------------------------------------------------- */
+.btmspace-10{margin-bottom:10px;}
+.btmspace-15{margin-bottom:15px;}
+.btmspace-30{margin-bottom:30px;}
+.btmspace-50{margin-bottom:50px;}
+.btmspace-80{margin-bottom:80px;}
+
+.inspace-5{padding:5px;}
+.inspace-10{padding:10px;}
+.inspace-15{padding:15px;}
+.inspace-30{padding:30px;}
+.inspace-50{padding:50px;}
+.inspace-80{padding:80px;}
+
+/* Lightbox CSS 1st & 2nd
+-------------------------------------------------------------------------------------------- */
+.row > .column {
+  padding: 0 8px;}
+.row > .column2 {
+  padding: 0 8px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;}
+
+.column {
+  float: left;
+  width: 25%;}
+.column2 {
+  float: left;
+  width: 33%;}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  max-width: 1200px;}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;}
+
+.previewSlides {
+  display: none;}
+
+.previewSlides2 {
+  display: none;}
+
+.cursor {
+  cursor: pointer}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #CC6600;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #CC6600;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;}
+
+img {
+  margin-bottom: -4px;}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;}
+
+.demo {
+  opacity: 0.6;}
+.demo2 {
+  opacity: 0.6;}
+
+
+.active,
+.demo:hover, demo2:hover {
+  opacity: 1;}
+
+img.hover-shadow {
+  transition: 0.3s}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}
+
+/*  Popup modal CSS ---------------------------------------------------------------- */
+
+/* Style the Image Used to Trigger the Modal */
+#qrImg, #qrImg2 {
+    cursor: pointer;
+	transition: 0.3s;
+}
+#qrImg:hover, #qrImg2:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.qrpopup {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.qrmodal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#qrcaption, #qrcaption2 {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.qrmodal-content, #qrcaption, #qrcaption2 { 
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+	from {-webkit-transform:scale(0)} 
+	to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+	from {transform:scale(0)} 
+	to {transform:scale(1)}
+}
+
+/* The Close Button */
+.qrclose {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.qrclose:hover,
+.qrclose:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+	.modal-content {
+    	width: 100%;
+    }
+}
+
+/*  Video modal CSS ---------------------------------------------------------------- */
+
+/* The Modal (background) */
+.vidmodal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+iframe {
+    margin: 0 auto; 
+    width: 100%;
+    border: 3px solid black;
+}
+
+/* Modal Content/Box */
+.vidmodal-content {
+	margin: 5% auto; /* 5% from the top and centered */
+	padding: 20px;
+	width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.vidclose {
+	color: #f4f4f4;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.vidclose:hover,
+.vidclose:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
